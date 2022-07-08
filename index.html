@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0">
+        <title>Oliviero Nardi, RA</title>
+        <meta name="description" content="Personal website of Oliviero Nardi, Research Assistant at the ILLC.">
+        <meta name="keywords" content="UvA, ILLC, Oliviero, Nardi">
+        <link rel="canonical" href="https://staff.fnwi.uva.nl/o.nardi/">
+<script>
+
+var myGamePiece;
+var myObstacles = [];
+var myScore;
+
+function startGame() {
+    myGamePiece = new component(30, 30, "red", 10, 120);
+    myGamePiece.gravity = 0.05;
+    myScore = new component("30px", "Consolas", "black", 280, 40, "text");
+    myGameArea.start();
+}
+
+var myGameArea = {
+    canvas : document.createElement("canvas"),
+    start : function() {
+        this.canvas.width = 480;
+        this.canvas.height = 270;
+        this.context = this.canvas.getContext("2d");
+        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+        this.frameNo = 0;
+        this.interval = setInterval(updateGameArea, 20);
+        },
+    clear : function() {
+        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    }
+}
+
+function component(width, height, color, x, y, type) {
+    this.type = type;
+    this.score = 0;
+    this.width = width;
+    this.height = height;
+    this.speedX = 0;
+    this.speedY = 0;    
+    this.x = x;
+    this.y = y;
+    this.gravity = 0;
+    this.gravitySpeed = 0;
+    this.update = function() {
+        ctx = myGameArea.context;
+        if (this.type == "text") {
+            ctx.font = this.width + " " + this.height;
+            ctx.fillStyle = color;
+            ctx.fillText(this.text, this.x, this.y);
+        } else {
+            ctx.fillStyle = color;
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+        }
+    }
+    this.newPos = function() {
+        this.gravitySpeed += this.gravity;
+        this.x += this.speedX;
+        this.y += this.speedY + this.gravitySpeed;
+        this.hitBottom();
+    }
+    this.hitBottom = function() {
+        var rockbottom = myGameArea.canvas.height - this.height;
+        if (this.y > rockbottom) {
+            this.y = rockbottom;
+            this.gravitySpeed = 0;
+        }
+    }
+    this.crashWith = function(otherobj) {
+        var myleft = this.x;
+        var myright = this.x + (this.width);
+        var mytop = this.y;
+        var mybottom = this.y + (this.height);
+        var otherleft = otherobj.x;
+        var otherright = otherobj.x + (otherobj.width);
+        var othertop = otherobj.y;
+        var otherbottom = otherobj.y + (otherobj.height);
+        var crash = true;
+        if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
+            crash = false;
+        }
+        return crash;
+    }
+}
+
+function updateGameArea() {
+    var x, height, gap, minHeight, maxHeight, minGap, maxGap;
+    for (i = 0; i < myObstacles.length; i += 1) {
+        if (myGamePiece.crashWith(myObstacles[i])) {
+            return;
+        } 
+    }
+    myGameArea.clear();
+    myGameArea.frameNo += 1;
+    if (myGameArea.frameNo == 1 || everyinterval(150)) {
+        x = myGameArea.canvas.width;
+        minHeight = 20;
+        maxHeight = 200;
+        height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
+        minGap = 50;
+        maxGap = 200;
+        gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
+        myObstacles.push(new component(10, height, "green", x, 0));
+        myObstacles.push(new component(10, x - height - gap, "green", x, height + gap));
+    }
+    for (i = 0; i < myObstacles.length; i += 1) {
+        myObstacles[i].x += -1;
+        myObstacles[i].update();
+    }
+    myScore.text="SCORE: " + myGameArea.frameNo;
+    myScore.update();
+    myGamePiece.newPos();
+    myGamePiece.update();
+}
+
+function everyinterval(n) {
+    if ((myGameArea.frameNo / n) % 1 == 0) {return true;}
+    return false;
+}
+
+function accelerate(n) {
+    myGamePiece.gravity = n;
+}
+</script>
+        <style>
+            body {margin: 5% auto; background: #f2f2f2; color: #444444; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.8; text-shadow: 0 1px 0 #ffffff; max-width: 65%; margin-bottom: 4%;}
+            code {background: white;}
+            a {border-bottom: 1px solid #444444; color: #444444; text-decoration: none;}
+            a:hover {border-bottom: 0;}
+            h1 {margin-bottom: 0; line-height: 1em}
+            h2 {color: #6c71c4;}
+            #nav {margin-top: 0px; line-height: 1;}
+            #nav a {border-bottom: none; color: #6c71c4; text-decoration: none}
+            #nav a:hover {border-bottom: 1px solid #6c71c4}
+            #nav {font-size: 75%}
+            #nav ul li { display: inline;}
+            #nav {overflow: hidden; margin: 0; }
+            #nav ul { list-style: none; padding: 0; margin-left: -3px}
+            #nav ul li:before { content: " | "; }
+            #about-me {margin-top: 5%;}
+            footer {font-size: 75%}
+            #linktotop {color: #6c71c4; text-decoration: none; border-bottom: none;}
+            #linktotop:hover {border-bottom: 1px solid #6c71c4}
+            img {
+                height: 15em;
+                width: auto\9; /* ie8 */
+            }
+            p {
+                text-align: justify;
+                text-justify: inter-word;
+            }
+@media screen and (max-width: 600px) {
+   body { margin: 0% auto; background: #f2f2f2; color: #444444; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.8; text-shadow: 0 1px 0 #ffffff; max-width: 100%; }
+           
+}
+        </style>
+    </head>
+        
+    <body onload="startGame()"><a name="top"></a>
+        <header>
+<div onload="startGame()"><button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">SEXO</button></div>
+            <h1>Oliviero Nardi</h1>
+              <div id="nav">
+                <ul>
+                    <li><a href="#top">about</a></li>
+                   
+                    <li><a href="#publications">publications</a></li>
+
+                    <li><a href="#teaching">teaching</a></li>
+
+                    <li><a href="#contact">contact</a></li>
+
+                    <li><a href="./files/OlivieroNardiCV.pdf" target="_blank">cv</a></li>
+                    
+                </ul>
+            </div>	
+		
+            <div id="about-me">
+<img id="oliviero-picture" src="https://c.tenor.com/R4Gc_y32GJcAAAAj/cubama-obama.gif" alt="Oliviero" title="picture by Michael Niamut" style="float:right;
+   
+    margin-left: 5%;
+    margin-bottom: inherit;
+    margin-right: 0px;
+    max-width: 270px;
+    width: 30vw;
+    height: auto;
+    margin-top: 2.1%">
+                <p>I am a research assistant at the <strong>Institute for Logic, Language and Computation</strong> (<a href="https://www.illc.uva.nl/">ILLC</a>) at the <strong>University of Amsterdam</strong>, where I am part of the <a href="https://staff.science.uva.nl/u.endriss/group.php">COMSOC Group</a> (led by <a href="https://staff.science.uva.nl/u.endriss/">Ulle Endriss</a>).</p>
+
+                <p>My main areas of research are artificial intelligence, multi-agent systems and knowledge representation, and I am particularly interested in collective decision-making. Currently, my work is focused on the use of automated reasoning techniques to tackle problems arising in <a href="https://research.illc.uva.nl/COMSOC/what-is-comsoc.html">computational social choice</a>.</p>
+
+                <p>Previously, I have obtained a Bachelor's Degree in Computer Science at the University of Verona and a Master's Degree in Artificial Intelligence at the University of Amsterdam. If you are interested, you can also have a look at my detailed <a href="./files/OlivieroNardiCV.pdf" target="_blank">curriculum vitae</a>.</p>
+
+                <p>Besides theorems and algorithms, I am also into cinema and poetry, and play the classical guitar.</p>
+            </div>
+
+        </header>
+        <h2 id="publications">Publications</h2>
+        <h3>2022</h3>
+            <ul>
+                <li> Oliviero Nardi, Arthur Boixel and Ulle Endriss. <strong>A Graph-Based Algorithm for the Automated Justification of Collective Decisions</strong>. In <em>Proceedings of the 21st International Conference on Autonomous Agents and Multiagent Systems</em> (AAMAS-2022), IFAAMAS, May 2022. [<a target="_blank" href="./files/NardiEtAlAAMAS2022.pdf">pdf</a>]
+            </ul>
+        <h3>2021</h3>
+            <ul>
+                <li> Oliviero Nardi. <strong>A Graph-Based Algorithm for the Automated Justification of Collective Decisions</strong>. Master's Thesis in Artificial Intelligence, University of Amsterdam, ILLC, July 2021. [<a target="_blank" href="./files/OlivieroNardiMSc2021.pdf">pdf</a>]
+            </ul>
+
+        </header>
+        <h2 id="teaching">Teaching</h2>
+        <h3>2020</h3>
+        <ul>
+            <li> Teaching assistant for the course on <a href="https://cl-illc.github.io/nlp1-2020/">Natural Language Processing</a>, Master's Degree in Artificial Intelligence, University of Amsterdam.
+        </ul>
+        <h2 id="contact">Contact me</h2>
+        <ul>
+            <li><strong>e-mail</strong>: o.nardi [at] uva.nl
+            <li><strong>github</strong>: <a href="https://github.com/olinarr">@olinarr</a></li>
+            <li><strong>visit</strong>: room F2.15 at <a href="https://www.illc.uva.nl/ContactUs/directions/">Science Park 107</a></li>
+            <li><strong>phone</strong>: <a href="tel:+31 (0)20 525 2858">+31 (0)20 525 2858</a></li>
+            <li><strong>mailbox</strong>: see <a href="./files/mailbox.txt" target="_blank">here</a></li>
+        </ul>
+            <hr style="margin-top: 4%">
+            <footer id="footer">
+            <div style="float:left;">copyright &copy; 2021 Oliviero Nardi</div>
+            <div style="float:right;"><a id="linktotop" href="#top">back to top</a></div>
+            </footer>
+</body></html>
