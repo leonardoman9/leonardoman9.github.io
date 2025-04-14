@@ -1,8 +1,112 @@
 baseURL = 'https://leonardoman9.github.io/'
 languageCode = 'it-it'
 title = 'Leonardo Mannini'
-theme = 'ananke'
+[module]
+[[module.imports]]
+path = "github.com/ananthb/jughead"
 
+# Site settings from Jughead theme
+copyright = "Leonardo Mannini"
+paginate = 10
+enableGitInfo = true
+buildFuture = true
+
+# Code Highlight
+pygmentsstyle = "monokai"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+# Parameters for Jughead theme
 [params]
-  description = "Il sito personale di Leonardo Mannini"
-  author = "Leonardo Mannini"
+# Add a logo to your site by placing an image in the assets directory
+# (e.g., assets/images/my_logo.png) and setting the path here.
+# logo = "images/my_logo.png" # Uncomment and update path if you have a logo
+
+# Custom CSS file for overrides
+customCSS = ["/css/custom.css"]
+
+# Choose a colour scheme from Pico CSS: "blue", "green", "red", "purple", etc.
+colourScheme = "blue"
+
+# Options for service worker (offline caching): "precache", true, or false/remove
+serviceWorker = "precache"
+
+# Add a subtitle displayed on the home page.
+subtitle = ""
+
+# Site GitHub Repository slug (e.g., "username/repo")
+# If enableGitInfo is true, this adds a link to the source code.
+siteRepo = "leonardoman9/leonardoman9.github.io"
+
+# Optional: JSON Resume configuration
+# Put your resume.json in the data/ directory or use the registry slug.
+jsonResumeRegistrySlug = "" # Using local data/resume.json file
+
+# Optional: Comments powered by giscus.app
+# Get these values by filling out the form on https://giscus.app
+# [params.giscus]
+# repo = "your-github-org/your-comments-repo"
+# repoID = "your-github-repo-id"
+# category = "your-announcement-category"
+# categoryID = "your-announcement-category-id"
+
+# Optional: Social media links
+# Add or remove sections as needed. Find icon names (e.g., from Feather Icons).
+[[params.social]]
+name = "GitHub"
+icon = "github" # Icon name (usually matches the service)
+url = "https://github.com/leonardoman9" # Your GitHub profile URL
+
+# [[params.social]]
+# name = "Twitter"
+# icon = "twitter"
+# url = "https://twitter.com/your-username/" # Your Twitter URL
+
+[[params.social]]
+name = "LinkedIn"
+icon = "linkedin"
+url = "https://www.linkedin.com/in/leonardomannini/" # Your LinkedIn URL
+
+# Main menu Items
+[[menu.main]]
+name = "Blog"
+url = "/posts" # Usually /posts or /blog, check theme docs if unsure
+weight = 1
+
+[[menu.main]]
+name = "Resume"
+url = "/resume/" 
+weight = 2
+
+# [[menu.main]]
+# name = "About"
+# url = "/about" # Create content/about.md for this page
+# weight = 3
+
+# Footer configuration
+[params.footer]
+text = "Leonardo Mannini | AI Engineer & Researcher"
+
+# Footer navigation links
+[[menu.footer]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.footer]]
+name = "Blog"
+url = "/posts/"
+weight = 2
+
+[[menu.footer]]
+name = "Resume"
+url = "/resume/"
+weight = 3
+
+# Enable KaTeX for mathematical expressions
+[params.katex]
+  enable = true
+  # KaTeX options
+  [params.katex.options]
+    throwOnError = false
+    errorColor = "#CD5C5C"

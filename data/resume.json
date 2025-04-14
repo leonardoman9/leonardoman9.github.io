@@ -1,0 +1,298 @@
+{
+  "basics": {
+    "name": "Leonardo Mannini",
+    "label": "MSc Student / AI Researcher / AI Engineer",
+    "image": "",
+    "email": "mannini.leonardo@protonmail.com",
+    "url": "https://leonardoman9.github.io/",
+    "summary": "🎓 MSc student in Artificial Intelligence @Unibo | Research intern @FBK (E3DA unit) | AI Engineer @GradientLabs\n\nI am currently working on the development and optimization of neural network architectures for embedded systems, with a specific focus on real-time audio processing and edge AI. My research interests include audio classification, speech synthesis on constrained hardware, and neural inference optimization techniques for low-memory platforms.\n\nI also have experience in designing AI services for NLP and computer vision applications, integrating both classical and modern deep learning techniques into production-ready pipelines.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Bologna",
+      "countryCode": "IT",
+      "region": "(available to relocate)"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "leonardoman9",
+        "url": "https://github.com/leonardoman9"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "leonardomannini",
+        "url": "https://www.linkedin.com/in/leonardomannini/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Bruno Kessler Foundation (FBK)",
+      "position": "Audio Edge AI Research Intern",
+      "url": "https://www.fbk.eu/en/",
+      "location": "Trento, Italy",
+      "startDate": "2025-03-01",
+      "endDate": "",
+      "summary": "Working within the E3DA research unit.",
+      "highlights": [
+        "Developing and prototyping AI models for tiny and edge platforms",
+        "Bringing neural networks inside audio & speech processing/synthesis pipelines on tiny devices"
+      ]
+    },
+     {
+      "name": "Gradient Labs",
+      "position": "AI Engineer",
+      "url": "https://www.gradientlabs.it/",
+      "location": "Remote",
+      "startDate": "2024-11-01",
+      "endDate": "",
+      "summary": "",
+      "highlights": [
+        "Developing and deploying AI services for computer vision and NLP applications",
+        "Implementing and optimizing LLM systems for production environments"
+      ]
+    },  
+    {
+      "name": "DHL Express Italy SRL",
+      "position": "IT Specialist",
+      "url": "",
+      "location": "Ancona",
+      "startDate": "2020-01-01",
+      "endDate": "2023-12-31",
+      "summary": "",
+      "highlights": [
+        "Implemented and managed robust network infrastructure",
+        "Provided technical support and troubleshooting for hardware, software, and network issues"
+      ]
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "University of Bologna",
+      "url": "https://www.unibo.it/en",
+      "area": "Artificial Intelligence",
+      "studyType": "Master of Science (MSc)",
+      "startDate": "2023-09-01",
+      "endDate": "",
+      "score": "",
+      "courses": [
+        "Foundational content on algorithms, mathematical methods, machine learning, planning and decision-making",
+        "Specialized courses in NLP, computer vision, architectures for AI, Cryptography and Knowledge Engineering",
+        "Additional focus on cognitive neuroscience, ethical and legal foundations of AI"
+      ]
+    },
+    {
+      "institution": "Polytechnic University of Marche",
+      "url": "",
+      "area": "Musical Instruments Engineering",
+      "studyType": "Postgraduate Diploma Programme (PDP)",
+      "startDate": "2022-01-01",
+      "endDate": "2022-12-31",
+      "score": "30/30 Cum laude (Award for best project)",
+      "courses": [
+        "Focus on digital signal processing and audio applications"
+      ]
+    },
+    {
+      "institution": "Polytechnic University of Marche",
+      "url": "",
+      "area": "Computer and Automation Engineering",
+      "studyType": "Bachelor of Science (BSc)",
+      "startDate": "2019-09-01",
+      "endDate": "2023-06-30",
+      "score": "99/110",
+      "courses": [
+        "Thesis: Project of a virtual synthesizer in C++ on the JUCE platform",
+        "Core focus on programming, electronics, and control systems"
+      ]
+    },
+    {
+      "institution": "Conservatory of Pesaro",
+      "url": "",
+      "area": "Piano",
+      "studyType": "Musical Performance Diploma (MA)",
+      "startDate": "2013-09-01",
+      "endDate": "2019-06-30",
+      "score": "10/10",
+      "courses": [
+        "Specialized in classical repertoire and music theory"
+      ]
+    }
+  ],
+  "awards": [
+     {
+      "title": "Award for best project of the Programme",
+      "date": "2022-12-01",
+      "awarder": "Polytechnic University of Marche (Musical Instruments Engineering PDP)",
+      "summary": ""
+    },
+     {
+      "title": "Winner of the Italian Rapid U16 Chess Championships",
+      "date": "2015-06-01",
+      "awarder": "",
+      "summary": ""
+    }
+  ],
+  "certificates": [
+     {
+      "name": "TOEFL iBT",
+      "date": "2023-05-01",
+      "issuer": "ETS",
+      "url": "",
+      "summary": "Score 105/120"
+    },
+     {
+      "name": "Teaching Qualification (24 CFU)",
+      "date": "2023-07-01",
+      "issuer": "",
+      "url": "",
+      "summary": "Psycho-pedagogical subjects"
+    }
+  ],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Programming Languages & Frameworks",
+      "level": "",
+      "keywords": [
+        "Python",
+        "C++",
+        "Java",
+        "SpringBoot",
+        "Juce",
+        "Kotlin",
+        "Flutter",
+        "Javascript",
+        "jQuery",
+        "PHP",
+        "Laravel",
+        "Prolog"
+      ]
+    },
+     {
+      "name": "AI & Machine Learning",
+      "level": "",
+      "keywords": [
+        "PyTorch",
+        "Keras",
+        "OpenCV",
+        "NumPy",
+        "Embedded AI",
+        "Edge AI",
+        "LLMs",
+        "CNNs",
+        "NLP",
+        "Computer Vision",
+        "AI deployment",
+        "Neural Inference Optimization",
+        "Audio Classification",
+        "Speech Synthesis",
+        "Constraint Programming",
+        "Integer Linear Programming",
+        "SAT/SMT"
+      ]
+    },
+     {
+      "name": "Audio & Music Technology",
+      "level": "",
+      "keywords": [
+         "JUCE",
+         "DSP",
+         "Real-time Audio Processing",
+         "MIDI Programming",
+         "DAWs"
+      ]
+    },
+    {
+      "name": "Other Skills",
+      "level": "",
+      "keywords": [
+        "Web Development",
+        "Teaching",
+        "Chess",
+        "Music Technology"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Italian",
+      "fluency": "Native Speaker"
+    },
+     {
+      "language": "English",
+      "fluency": "C1 (TOEFL 105/120)"
+    },
+     {
+      "language": "German",
+      "fluency": "Basic knowledge"
+    }
+  ],
+  "interests": [],
+  "references": [],
+  "projects": [
+     {
+      "name": "Virtual Synthesizer (Bachelor's Thesis)",
+      "startDate": "2022-09-01",
+      "endDate": "2023-06-30",
+      "summary": "Developed a virtual synthesizer using C++ and JUCE framework with audio processing algorithms and MIDI control.",
+      "highlights": [
+        "Implemented real-time audio processing and modular synthesis architecture"
+      ],
+      "url": ""
+    },
+    {
+      "name": "Sound Classifier (Personal Project)",
+      "startDate": "2023-03-01",
+      "endDate": "2023-06-01",
+      "summary": "Developed an Environmental Sound Classification system using PyTorch and CNNs that converts audio to mel spectrograms for acoustic analysis.",
+      "highlights": [
+        "Implemented a VGG-style neural network achieving 93.7% accuracy on ESC-10 dataset",
+        "Real-time streaming classification capabilities using sliding window and majority voting"
+      ],
+      "url": ""
+    },
+     {
+      "name": "Hiring Assistant (Web Application)",
+      "startDate": "2024-01-01",
+      "endDate": "2024-03-31",
+      "summary": "Developed web platform for automated evaluation of video interviews and CVs.",
+      "highlights": [
+        "Implemented AI-powered assessment tools and user authentication system"
+      ],
+      "url": ""
+    },
+    {
+      "name": "Food Product Recognition (University Project)",
+      "startDate": "2023-10-01",
+      "endDate": "2023-12-15",
+      "summary": "Created hybrid system combining traditional computer vision and deep learning.",
+      "highlights": [
+        "Achieved 92% accuracy in product classification and detection"
+      ],
+      "url": ""
+    },
+    {
+      "name": "Sexism Detection in Social Media (University Assignment)",
+      "startDate": "2024-02-01",
+      "endDate": "2024-04-15",
+      "summary": "Developed and compared BiLSTM and Twitter-RoBERTa models. Conducted extensive experiments with Llama-3.1 and Qwen2-7B for in-context learning.",
+      "highlights": [
+        "Analyzed performance across zero-shot and few-shot settings"
+      ],
+      "url": ""
+    },
+    {
+      "name": "LeoLM (Personal Project)",
+      "startDate": "2023-11-01",
+      "endDate": "2024-01-31",
+      "summary": "Built Raspberry Pi-based voice assistant using OpenRouter APIs.",
+      "highlights": [
+        "Implemented wake word detection and natural language understanding"
+      ],
+      "url": ""
+    }
+  ]
+} 

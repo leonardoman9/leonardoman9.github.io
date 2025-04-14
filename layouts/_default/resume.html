@@ -1,0 +1,69 @@
+{{ define "main" }}
+  <main class="container" style="max-width: 100% !important; width: 100% !important; padding-left: 2rem !important; padding-right: 2rem !important;">
+    <style>
+      /* Fix grid layout - either make it single column or style as table */
+      .grid {
+        display: block !important; /* Override grid display */
+        grid-template-columns: 1fr !important; /* Force single column if still grid */
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+      
+      /* Force grid cells to be full width */
+      .grid > * {
+        width: 100% !important;
+        max-width: 100% !important;
+        grid-column: 1 / -1 !important; /* Span all columns */
+      }
+    </style>
+    
+    {{ with partial "resume/get.html" . }}
+      <div class="resume" style="max-width: 100% !important; width: 100% !important;">
+      
+        <section>
+          {{ partial "resume/work.html" . }}
+        </section>
+
+        <section>
+          {{ partial "resume/volunteer.html" . }}
+        </section>
+
+        <section>
+          {{ partial "resume/education.html" . }}
+        </section>
+
+        <section>
+          {{ partial "resume/awards.html" . }}
+        </section>
+
+        <section>
+          {{ partial "resume/certificates.html" . }}
+        </section>
+
+        <section>
+          {{ partial "resume/publications.html" . }}
+        </section>
+
+        <section>
+          {{ partial "resume/skills.html" . }}
+        </section>
+
+        <section>
+          {{ partial "resume/languages.html" . }}
+        </section>
+
+        <section>
+          {{ partial "resume/interests.html" . }}
+        </section>
+
+        <section>
+          {{ partial "resume/references.html" . }}
+        </section>
+
+        <section>
+          {{ partial "resume/projects.html" . }}
+        </section>
+      </div>
+    {{ end }}
+  </main>
+{{ end }} 

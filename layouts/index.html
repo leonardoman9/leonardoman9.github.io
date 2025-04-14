@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="{{ .Site.Language.Lang | default "en" }}">
+  <head>
+    {{ partial "head.html" . }}
+    <style>
+      /* Custom styles to force full width */
+      main.container {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+      }
+      
+      article.resume {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      
+      /* Fix grid layout - either make it single column or style as table */
+      .grid {
+        display: block !important; /* Override grid display */
+        grid-template-columns: 1fr !important; /* Force single column if still grid */
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+      
+      /* Force grid cells to be full width */
+      .grid > * {
+        width: 100% !important;
+        max-width: 100% !important;
+        grid-column: 1 / -1 !important; /* Span all columns */
+      }
+    </style>
+  </head>
+
+  <body>
+    {{ partial "header.html" . }}
+
+    <main class="container">
+      {{ $pages := first 3 (
+        where
+        (where .Site.RegularPages "Type" "in" .Site.Params.mainSections)
+        "Params.categories" "intersect" (slice  "featured")
+        )
+      }}
+      {{- if gt (len $pages) 0 }}
+        <section>
+          <h2>{{ T "featured" | title }}</h2>
+          <ul>
+            {{ range $pages }}
+              {{ template "partials/pageslistitem.html" . }}
+            {{ end }}
+          </ul>
+        </section>
+      {{ end }}
+
+      <h2>{{ T "about" | title }}</h2>
+      <article class="resume">
+        {{- with partial "resume/get.html" . -}}
+          {{- partial "resume/overview.html" . -}}
+        {{- end -}}
+      </article>
+
+    </main>
+
+    {{ partial "footer.html" . }}
+  </body>
+</html> 

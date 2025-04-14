@@ -1,19 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Leonardo Mannini</title>
-    <link>https://leonardoman9.github.io/</link>
-    <description>Recent content on Leonardo Mannini</description>
+    <title>Home on Leonardo Mannini</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in Home on Leonardo Mannini</description>
     <generator>Hugo</generator>
     <language>it-it</language>
-    <lastBuildDate>Mon, 14 Apr 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://leonardoman9.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Apr 2025 12:00:00 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Benvenuto</title>
-      <link>https://leonardoman9.github.io/posts/benvenuto/</link>
+      <link>http://localhost:1313/posts/first-post/</link>
+      <pubDate>Mon, 14 Apr 2025 12:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/first-post/</guid>
+      <description>&lt;p&gt;Benvenuto nel mio sito personale. Qui troverai informazioni sui miei progetti e interessi di ricerca nel campo dell&amp;rsquo;intelligenza artificiale e dell&amp;rsquo;audio processing.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Benvenuto</title>
+      <link>http://localhost:1313/posts/benvenuto/</link>
       <pubDate>Mon, 14 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://leonardoman9.github.io/posts/benvenuto/</guid>
+      <guid>http://localhost:1313/posts/benvenuto/</guid>
       <description>&lt;p&gt;Ciao! Questo è il mio sito personale creato con Hugo.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My Resume</title>
+      <link>http://localhost:1313/resume/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/resume/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TinyML: AI at the Edge</title>
+      <link>http://localhost:1313/posts/prova/</link>
+      <pubDate>Fri, 14 Apr 2023 18:28:00 +0100</pubDate>
+      <guid>http://localhost:1313/posts/prova/</guid>
+      <description>&lt;h1 id=&#34;tinyml-bringing-ai-to-the-worlds-smallest-devices&#34;&gt;TinyML: Bringing AI to the World&amp;rsquo;s Smallest Devices&lt;/h1&gt;&#xA;&lt;p&gt;TinyML (Tiny Machine Learning) represents a groundbreaking field at the intersection of embedded systems and machine learning. It focuses on deploying ML algorithms on ultra-low-power microcontrollers and embedded devices, often operating with just milliwatts or microwatts of power.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-tinyml-matters&#34;&gt;Why TinyML Matters&lt;/h2&gt;&#xA;&lt;p&gt;The ability to run ML models directly on edge devices without cloud connectivity offers several advantages:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Privacy&lt;/strong&gt;: Data remains on the device&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Latency&lt;/strong&gt;: Immediate responses without network delays&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Efficiency&lt;/strong&gt;: Reduced power consumption&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Reliability&lt;/strong&gt;: Functions without internet connectivity&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Cost&lt;/strong&gt;: Eliminates cloud computing expenses&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;technical-challenges&#34;&gt;Technical Challenges&lt;/h2&gt;&#xA;&lt;p&gt;Implementing neural networks on devices with as little as 256KB of flash memory and 64KB of RAM presents significant challenges. Consider the memory requirements of a typical CNN:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

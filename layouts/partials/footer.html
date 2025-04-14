@@ -1,0 +1,29 @@
+<footer class="container">
+  <section class="footer-explore">
+    <h4>{{ T "explore" | title }}</h4>
+    {{ with .Site.Taxonomies.tags }}
+      <h5>
+        <a href="/tags/">Tags</a>
+      </h5>
+      <nav>
+        <ul>
+          {{ range first 5 .ByCount }}
+            <li>
+              <small>
+                <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+              </small>
+            </li>
+          {{ end }}
+        </ul>
+      </nav>
+    {{ end }}
+  </section>
+
+  <section>
+    <p>
+      <small>
+        © {{ now.Format "2006" }} {{ site.Copyright }}
+      </small>
+    </p>
+  </section>
+</footer> 

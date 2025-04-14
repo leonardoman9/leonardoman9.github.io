@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Leonardo Mannini</title>
-    <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on Leonardo Mannini</description>
+    <title>Ai on Leonardo Mannini</title>
+    <link>http://localhost:1313/tags/ai/</link>
+    <description>Recent content in Ai on Leonardo Mannini</description>
     <generator>Hugo</generator>
     <language>it-it</language>
     <lastBuildDate>Mon, 14 Apr 2025 12:00:00 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/ai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Benvenuto</title>
       <link>http://localhost:1313/posts/first-post/</link>
       <pubDate>Mon, 14 Apr 2025 12:00:00 +0100</pubDate>
       <guid>http://localhost:1313/posts/first-post/</guid>
       <description>&lt;p&gt;Benvenuto nel mio sito personale. Qui troverai informazioni sui miei progetti e interessi di ricerca nel campo dell&amp;rsquo;intelligenza artificiale e dell&amp;rsquo;audio processing.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Benvenuto</title>
-      <link>http://localhost:1313/posts/benvenuto/</link>
-      <pubDate>Mon, 14 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/benvenuto/</guid>
-      <description>&lt;p&gt;Ciao! Questo è il mio sito personale creato con Hugo.&lt;/p&gt;</description>
     </item>
     <item>
       <title>TinyML: AI at the Edge</title>

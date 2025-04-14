@@ -1,0 +1,18 @@
+/* Custom styles to override theme defaults */
+
+/* Make content containers full width */
+.container, 
+main .container,
+article,
+section {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* Ensure text content has reasonable margins on small screens */
+@media (max-width: 576px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+} 
