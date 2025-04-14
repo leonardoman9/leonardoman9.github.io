@@ -1,3 +1,8 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = 'https://tuo-username.github.io/'
+languageCode = 'it-it'
+title = 'Leonardo Mannini'
+theme = 'ananke'
+
+[params]
+  description = "Il sito personale di Leonardo Mannini"
+  author = "Leonardo Mannini"
