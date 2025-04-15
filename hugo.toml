@@ -110,3 +110,6 @@ weight = 3
   [params.katex.options]
     throwOnError = false
     errorColor = "#CD5C5C"
+
+# Google Analytics
+googleAnalytics = "G-PW6SB9H75R"
