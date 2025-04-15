@@ -12,7 +12,6 @@ const pages = [
   "/posts/",
   "/tags/research/",
   "/tags/",
-  "/posts/benvenuto/",
   "/resume/",
   "/categories/deep-learning/",
   "/tags/embedded-systems/",
