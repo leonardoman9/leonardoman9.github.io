@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Abstract research assistant placeholder">
+  <rect width="640" height="360" fill="#171923"/>
+  <rect x="82" y="64" width="210" height="240" rx="8" fill="#f8fafc"/>
+  <path d="M116 112h126M116 146h142M116 180h110M116 214h138M116 248h84" stroke="#334155" stroke-width="10" stroke-linecap="round"/>
+  <rect x="348" y="74" width="210" height="96" rx="18" fill="#1d4ed8"/>
+  <rect x="348" y="194" width="170" height="92" rx="18" fill="#0f766e"/>
+  <path d="M324 132h24M324 238h24" stroke="#94a3b8" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="524" cy="254" r="28" fill="#99f6e4"/>
+</svg>

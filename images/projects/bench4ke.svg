@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Abstract knowledge engineering benchmark placeholder">
+  <rect width="640" height="360" fill="#111827"/>
+  <circle cx="188" cy="122" r="34" fill="#c4b5fd"/>
+  <circle cx="328" cy="94" r="34" fill="#93c5fd"/>
+  <circle cx="456" cy="154" r="34" fill="#fca5a5"/>
+  <circle cx="258" cy="242" r="34" fill="#86efac"/>
+  <circle cx="430" cy="260" r="34" fill="#fcd34d"/>
+  <path d="M220 114l74-14M356 108l70 34M204 150l38 64M288 238l108 18M354 112l-76 104M454 188l-18 38" stroke="#e5e7eb" stroke-width="8"/>
+  <rect x="72" y="288" width="496" height="22" rx="11" fill="#374151"/>
+</svg>
