@@ -20,6 +20,7 @@
             </p>
           {{ end }}
           {{ with .studyType }}<p>{{ . }}</p>{{ end }}
+          {{ with .score }}<p>Score: {{ . }}</p>{{ end }}
         </div>
         <p align="right">
           <em>{{ partial "resume/start-end-times.html" . }}</em>

@@ -29,7 +29,7 @@ customCSS = ["/css/custom.css"]
 colourScheme = "blue"
 
 # Options for service worker (offline caching): "precache", true, or false/remove
-serviceWorker = "precache"
+serviceWorker = false
 
 # Add a subtitle displayed on the home page.
 subtitle = ""
@@ -67,25 +67,20 @@ name = "LinkedIn"
 icon = "linkedin"
 url = "https://www.linkedin.com/in/leonardomannini/" # Your LinkedIn URL
 
+[[params.social]]
+name = "Email"
+icon = "mail"
+url = "mailto:mannini.leonardo@protonmail.com"
+
 # Main menu Items
 [[menu.main]]
 name = "Blog"
 url = "/posts" # Usually /posts or /blog, check theme docs if unsure
 weight = 1
 
-[[menu.main]]
-name = "Resume"
-url = "/resume/" 
-weight = 2
-
-# [[menu.main]]
-# name = "About"
-# url = "/about" # Create content/about.md for this page
-# weight = 3
-
 # Footer configuration
 [params.footer]
-text = "Leonardo Mannini | AI Engineer & Researcher"
+text = "Leonardo Mannini | AI/ML Engineer | LLM & RAG Systems | Edge AI / TinyML"
 
 # Footer navigation links
 [[menu.footer]]
@@ -97,11 +92,6 @@ weight = 1
 name = "Blog"
 url = "/posts/"
 weight = 2
-
-[[menu.footer]]
-name = "Resume"
-url = "/resume/"
-weight = 3
 
 # Enable KaTeX for mathematical expressions
 [params.katex]

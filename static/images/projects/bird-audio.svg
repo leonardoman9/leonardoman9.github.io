@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Abstract bird audio classification placeholder">
+  <rect width="640" height="360" fill="#102016"/>
+  <path d="M92 218c56-64 126-88 210-62 70 22 132 8 204-48" fill="none" stroke="#86efac" stroke-width="12" stroke-linecap="round"/>
+  <path d="M110 250h420" stroke="#334155" stroke-width="6"/>
+  <path d="M144 250v-40M184 250v-78M224 250v-118M264 250v-84M304 250v-138M344 250v-70M384 250v-110M424 250v-94M464 250v-52" stroke="#bbf7d0" stroke-width="12" stroke-linecap="round"/>
+  <path d="M390 102c34-28 82-24 112 6-38 6-62 24-76 56-12-25-24-44-36-62z" fill="#f8fafc"/>
+  <circle cx="466" cy="112" r="6" fill="#102016"/>
+</svg>

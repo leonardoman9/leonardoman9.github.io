@@ -1,0 +1,112 @@
+{{ with partial "resume/get.html" . }}
+  <div id="resume" class="resume-page">
+    <aside class="resume-toc" aria-label="Page sections">
+      <button class="resume-toc-toggle" type="button" aria-expanded="false" aria-controls="resume-toc-nav">
+        <span aria-hidden="true">☰</span>
+        <span>Sections</span>
+      </button>
+      <nav id="resume-toc-nav">
+        <a href="#about">About</a>
+        <a href="#publications">Publications</a>
+        <a href="#work">Work</a>
+        <a href="#education">Education</a>
+        <a href="#awards">Awards</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#skills">Skills</a>
+        <a href="#languages">Languages</a>
+        <a href="#projects">Projects</a>
+      </nav>
+    </aside>
+
+    <article class="resume resume-content">
+      {{ partial "resume/overview.html" . }}
+
+      <section id="work" class="resume-section">
+        {{ partial "resume/work.html" . }}
+      </section>
+
+      <section id="education" class="resume-section">
+        {{ partial "resume/education.html" . }}
+      </section>
+
+      <section id="awards" class="resume-section">
+        {{ partial "resume/awards.html" . }}
+      </section>
+
+      <section id="certificates" class="resume-section">
+        {{ partial "resume/certificates.html" . }}
+      </section>
+
+      <section id="skills" class="resume-section">
+        {{ partial "resume/skills.html" . }}
+      </section>
+
+      <section id="languages" class="resume-section">
+        {{ partial "resume/languages.html" . }}
+      </section>
+
+      <section id="projects" class="resume-section">
+        {{ partial "resume/projects.html" . }}
+      </section>
+    </article>
+  </div>
+
+  <script>
+    (() => {
+      const tocLinks = Array.from(document.querySelectorAll(".resume-toc a[href^='#']"));
+      const toc = document.querySelector(".resume-toc");
+      const tocToggle = document.querySelector(".resume-toc-toggle");
+      const sections = tocLinks
+        .map((link) => document.querySelector(link.getAttribute("href")))
+        .filter(Boolean);
+
+      if (!tocLinks.length || !sections.length) return;
+
+      const setActive = (id) => {
+        tocLinks.forEach((link) => {
+          link.classList.toggle("is-active", link.getAttribute("href") === `#${id}`);
+        });
+      };
+
+      const updateActive = () => {
+        const marker = window.scrollY + Math.min(window.innerHeight * 0.35, 320);
+        let current = sections[0];
+
+        sections.forEach((section) => {
+          if (section.offsetTop <= marker) current = section;
+        });
+
+        setActive(current.id);
+      };
+
+      let ticking = false;
+      const requestUpdate = () => {
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(() => {
+          updateActive();
+          ticking = false;
+        });
+      };
+
+      window.addEventListener("scroll", requestUpdate, { passive: true });
+      window.addEventListener("resize", requestUpdate);
+
+      if (toc && tocToggle) {
+        tocToggle.addEventListener("click", () => {
+          const isOpen = toc.classList.toggle("is-open");
+          tocToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        tocLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            toc.classList.remove("is-open");
+            tocToggle.setAttribute("aria-expanded", "false");
+          });
+        });
+      }
+
+      updateActive();
+    })();
+  </script>
+{{ end }}

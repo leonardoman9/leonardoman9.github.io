@@ -1,0 +1,25 @@
+{{ with .publications }}
+  <h2>{{ T "publication" | title }}</h2>
+  <hr />
+  {{ range $pub := . }}
+    <div class="grid">
+      <div>
+        {{ with $pub.name }}
+          <h3>
+            {{ with $pub.url }}
+              <a href="{{ . }}">{{ $pub.name }}</a>
+            {{ else }}
+              {{ $pub.name }}
+            {{ end }}
+          </h3>
+        {{ end }}
+        {{ with $pub.publisher }}
+          <p><em>{{ . }}</em></p>
+        {{ end }}
+      </div>
+      <p align="right">
+        <em>{{ partial "resume/date-time.html" $pub }}</em>
+      </p>
+    </div>
+  {{ end }}
+{{ end }}

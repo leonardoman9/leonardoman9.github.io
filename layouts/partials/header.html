@@ -1,0 +1,29 @@
+<header class="container">
+  <nav id="site-nav">
+    <ul>
+      <li>
+        <h1><a href="{{ absURL "" }}">{{ .Site.Title }}</a></h1>
+      </li>
+    </ul>
+    <ul>
+      {{ range .Site.Menus.main }}
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+  </nav>
+
+  {{ with .Site.Params.Social }}
+    <div id="site-header-social" align="center">
+      {{ range . }}
+        <a class="social-link" href="{{ .url }}" rel="me" title="{{ .name }}">
+          {{ partial "feather.html" .icon }}
+          <span class="sr-only">{{ .name }}</span>
+        </a>
+      {{ end }}
+    </div>
+  {{ end }}
+
+  {{ if isset .Site.Params "subtitle" }}
+    <p>{{ .Site.Params.Subtitle | markdownify }}</p>
+  {{ end }}
+</header>

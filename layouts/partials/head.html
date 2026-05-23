@@ -1,7 +1,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} |{{ .Site.Title }}{{ end }}</title>
+<title>{{ .Site.Title }}</title>
 
 <!-- Google Analytics -->
 <!-- Google tag (gtag.js) -->
@@ -26,8 +26,12 @@ if (navigator.serviceWorker) {
   {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
 
-{{ template "_internal/opengraph.html" . }}
-{{ template "_internal/twitter_cards.html" . }}
+<meta property="og:title" content="{{ .Site.Title }}" />
+<meta property="og:site_name" content="{{ .Site.Title }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="{{ .Site.Title }}" />
 
 <link
   rel="preload"
@@ -73,30 +77,11 @@ if (navigator.serviceWorker) {
   href="{{ "picocss/pico.blue.css" | relURL }}"
 />
 
-<!-- Custom styles for full-width layout -->
-<style>
-  main.container {
-    max-width: 100% !important;
-    width: 100% !important;
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
-  }
-  
-  article.resume {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-  
-  .grid {
-    display: block !important;
-    grid-template-columns: 1fr !important;
-    max-width: 100% !important;
-    width: 100% !important;
-  }
-  
-  .grid > * {
-    width: 100% !important;
-    max-width: 100% !important;
-    grid-column: 1 / -1 !important;
-  }
-</style> 
+{{ range .Site.Params.customCSS }}
+<link
+  rel="stylesheet"
+  type="text/css"
+  media="screen"
+  href="{{ . | relURL }}"
+/>
+{{ end }}

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-	<meta name="generator" content="Hugo 0.146.4">
+	<meta name="generator" content="Hugo 0.158.0">
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -19,24 +19,14 @@
 </script>
 
 
-<script>
-if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/sw.js", { scope: "/" });
-}
-</script>
-
 
 <link rel="alternate" type="application/rss+xml" href="https://leonardoman9.github.io/index.xml" title="Leonardo Mannini" />
-<meta property="og:url" content="https://leonardoman9.github.io/">
-  <meta property="og:site_name" content="Leonardo Mannini">
-  <meta property="og:title" content="Home">
-  <meta property="og:locale" content="it_it">
-  <meta property="og:type" content="website">
-
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Home">
-
+<meta property="og:title" content="Leonardo Mannini" />
+<meta property="og:site_name" content="Leonardo Mannini" />
+<meta property="og:url" content="https://leonardoman9.github.io/" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Leonardo Mannini" />
 
 <link
   rel="preload"
@@ -83,61 +73,14 @@ if (navigator.serviceWorker) {
 />
 
 
-<style>
-  main.container {
-    max-width: 100% !important;
-    width: 100% !important;
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
-  }
-  
-  article.resume {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-  
-  .grid {
-    display: block !important;
-    grid-template-columns: 1fr !important;
-    max-width: 100% !important;
-    width: 100% !important;
-  }
-  
-  .grid > * {
-    width: 100% !important;
-    max-width: 100% !important;
-    grid-column: 1 / -1 !important;
-  }
-</style> 
-    <style>
-       
-      main.container {
-        max-width: 100% !important;
-        width: 100% !important;
-        padding-left: 2rem !important;
-        padding-right: 2rem !important;
-      }
-      
-      article.resume {
-        width: 100% !important;
-        max-width: 100% !important;
-      }
-      
-       
-      .grid {
-        display: block !important;  
-        grid-template-columns: 1fr !important;  
-        max-width: 100% !important;
-        width: 100% !important;
-      }
-      
-       
-      .grid > * {
-        width: 100% !important;
-        max-width: 100% !important;
-        grid-column: 1 / -1 !important;  
-      }
-    </style>
+<link
+  rel="stylesheet"
+  type="text/css"
+  media="screen"
+  href="/css/custom.css"
+/>
+
+
   </head>
 
   <body>
@@ -152,196 +95,849 @@ if (navigator.serviceWorker) {
       
         <li><a href="/posts">Blog</a></li>
       
-        <li><a href="/resume/">Resume</a></li>
-      
     </ul>
   </nav>
 
   
-    <div id="site-header-social" align="center"><a href="https://github.com/leonardoman9" rel="me" title="GitHub">
+    <div id="site-header-social" align="center">
+      
+        <a class="social-link" href="https://github.com/leonardoman9" rel="me" title="GitHub">
           <svg class="feather">
   <use href="https://leonardoman9.github.io/feather-icons/feather-sprite.svg#github"></use>
 </svg>
 
-        </a><span>|</span><a href="https://www.linkedin.com/in/leonardomannini/" rel="me" title="LinkedIn">
+          <span class="sr-only">GitHub</span>
+        </a>
+      
+        <a class="social-link" href="https://www.linkedin.com/in/leonardomannini/" rel="me" title="LinkedIn">
           <svg class="feather">
   <use href="https://leonardoman9.github.io/feather-icons/feather-sprite.svg#linkedin"></use>
 </svg>
 
-        </a></div><p></p></header>
+          <span class="sr-only">LinkedIn</span>
+        </a>
+      
+        <a class="social-link" href="mailto:mannini.leonardo@protonmail.com" rel="me" title="Email">
+          <svg class="feather">
+  <use href="https://leonardoman9.github.io/feather-icons/feather-sprite.svg#mail"></use>
+</svg>
+
+          <span class="sr-only">Email</span>
+        </a>
+      
+    </div>
+  
+
+  
+    <p></p>
+  
+</header>
 
 
     <main class="container">
       
+  <div id="resume" class="resume-page">
+    <aside class="resume-toc" aria-label="Page sections">
+      <button class="resume-toc-toggle" type="button" aria-expanded="false" aria-controls="resume-toc-nav">
+        <span aria-hidden="true">☰</span>
+        <span>Sections</span>
+      </button>
+      <nav id="resume-toc-nav">
+        <a href="#about">About</a>
+        <a href="#publications">Publications</a>
+        <a href="#work">Work</a>
+        <a href="#education">Education</a>
+        <a href="#awards">Awards</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#skills">Skills</a>
+        <a href="#languages">Languages</a>
+        <a href="#projects">Projects</a>
+      </nav>
+    </aside>
 
-      <h2>About</h2>
-      <article class="resume"><section class="grid">
-    <div>
-      
-        <h2>Leonardo Mannini</h2>
-      
-      
-        <p><em>MSc Student / AI Researcher / AI Engineer</em></p>
-      
-      
-        <p>🎓 MSc student in Artificial Intelligence @Unibo | Research intern @FBK (E3DA unit) | AI Engineer @GradientLabs
+    <article class="resume resume-content">
+      <section id="about" class="grid resume-section">
+  <div>
+    
+      <h2>Leonardo Mannini</h2>
+    
+    
+      <p><em>AI/ML Engineer | LLM &amp; RAG Systems | Edge AI / TinyML</em></p>
+    
+    
+      <p>AI Engineer specializing in production LLM pipelines, RAG systems, agent-based workflows, backend development, and Edge AI for resource-constrained environments. I build end-to-end AI systems with LangChain, LangGraph, FastAPI, vector search, Docker-based services, and local or hosted LLMs. My research work includes TinyML models for real-time bioacoustic classification on microcontrollers, contributing to a paper accepted at IEEE ICASSP 2026.</p>
+    
+  </div>
+</section>
 
-I am currently working on the development and optimization of neural network architectures for embedded systems, with a specific focus on real-time audio processing and edge AI. My research interests include audio classification, speech synthesis on constrained hardware, and neural inference optimization techniques for low-memory platforms.
 
-I also have experience in designing AI services for NLP and computer vision applications, integrating both classical and modern deep learning techniques into production-ready pipelines.</p>
+  <section id="publications" class="resume-section">
+    <h3>Publications</h3>
+    <ul>
       
-    </div>
-
-    <div align="center">
+        <li>
+          
+            <a href="https://ieeexplore.ieee.org/document/11463679">Enabling Multi-Species Bird Classification on Low-Power Bioacoustic Loggers</a>
+          
+        </li>
       
-      
-    </div>
+    </ul>
   </section>
 
-  <section class="grid basics-links">
-    <div>
-      <h3>Contact</h3>
-      <ul>
-        
-          <li>
-            <a href="mailto:mannini.leonardo@protonmail.com" rel="me" title="Email">
-              <svg class="feather">
-  <use href="https://leonardoman9.github.io/feather-icons/feather-sprite.svg#mail"></use>
-</svg>
 
-              mannini.leonardo@protonmail.com
-            </a>
-          </li>
-        
-        
-        
-          <li>
-            <a href="https://leonardoman9.github.io/" rel="me" title="Website">
-              <svg class="feather">
-  <use href="https://leonardoman9.github.io/feather-icons/feather-sprite.svg#link"></use>
-</svg>
 
-              https://leonardoman9.github.io/
-            </a>
-          </li>
+      <section id="work" class="resume-section">
         
-      </ul>
+  <h2>Work Experience</h2>
+  <hr />
+  
+    <article>
+      <div class="grid">
+        <div>
+          
+            <h3>AI Engineer</h3>
+          
+          
+            <p>
+              <em>
+                
+                  <a href="https://www.gradientlabs.it/" target="_blank">GradientLabs</a>
+                
+              </em>
+            </p>
+          
+        </div>
+        <p align="right">
+          <em>
+  August 2023 ⇾
+
+
+  Present
+
+</em>
+        </p>
+      </div>
+
+      <div>
+        
+          <p>Designing and deploying LangChain, RAG, LLM, FastAPI, and vector-search systems for business automation and intelligent workflows.</p>
+        
+
+        
+          <h4>Highlights</h4>
+          <ul>
+            
+              <li>Built agent-based RAG pipelines using LangChain, FastAPI, and FAISS, indexing 1,200&#43; documents with 87% citation accuracy.</li>
+            
+              <li>Reduced response latency from 9.4s to 4.1s through retrieval optimization and caching strategies.</li>
+            
+              <li>Developed multi-step AI agents integrating LLM reasoning, external tools, structured outputs, and tool orchestration.</li>
+            
+              <li>Designed Docker-based backend services supporting scalable asynchronous workflows and reproducible AI deployments.</li>
+            
+              <li>Delivered end-to-end AI systems from model design to deployment.</li>
+            
+          </ul>
+        
+      </div>
+    </article>
+  
+    <article>
+      <div class="grid">
+        <div>
+          
+            <h3>Embedded AI Researcher (TinyML &amp; Edge AI)</h3>
+          
+          
+            <p>
+              <em>
+                
+                  <a href="https://www.fbk.eu/en/" target="_blank">Fondazione Bruno Kessler - FBK</a>
+                
+              </em>
+            </p>
+          
+        </div>
+        <p align="right">
+          <em>
+  March 2025 ⇾
+
+
+  February 2026
+
+</em>
+        </p>
+      </div>
+
+      <div>
+        
+          <p>Developed TinyML models for real-time audio classification on resource-constrained embedded devices.</p>
+        
+
+        
+          <h4>Highlights</h4>
+          <ul>
+            
+              <li>Designed lightweight CNN-GRU-Attention architectures for 70-species classification on microcontrollers.</li>
+            
+              <li>Processed 150k&#43; audio files for model training and benchmarking.</li>
+            
+              <li>Optimized inference pipelines using TensorFlow Lite Micro and CMSIS-NN.</li>
+            
+              <li>Achieved about 16x lower energy consumption compared to standard baseline systems.</li>
+            
+              <li>Contributed to research accepted at IEEE ICASSP 2026.</li>
+            
+          </ul>
+        
+      </div>
+    </article>
+  
+    <article>
+      <div class="grid">
+        <div>
+          
+            <h3>Software Engineer</h3>
+          
+          
+            <p>
+              <em>
+                
+                  <a href="https://www.dhl.com/it-it/home.html" target="_blank">DHL Express Italy SRL</a>
+                
+              </em>
+            </p>
+          
+        </div>
+        <p align="right">
+          <em>
+  October 2020 ⇾
+
+
+  April 2023
+
+</em>
+        </p>
+      </div>
+
+      <div>
+        
+          <p>Developed backend applications supporting logistics automation and operational workflows.</p>
+        
+
+        
+          <h4>Highlights</h4>
+          <ul>
+            
+              <li>Built REST APIs and data pipelines using Python, C&#43;&#43;, and Java.</li>
+            
+              <li>Automated batch-processing workflows using scheduled tasks and database integration.</li>
+            
+              <li>Designed reporting systems reducing manual processing and improving workflow reliability.</li>
+            
+              <li>Maintained production systems handling operational data flows.</li>
+            
+          </ul>
+        
+      </div>
+    </article>
+  
+
+
+      </section>
+
+      <section id="education" class="resume-section">
+        
+  <h2>Education</h2>
+  <hr />
+  
+    <article>
+      <div class="grid">
+        <div>
+          
+            <h3>Artificial Intelligence</h3>
+          
+          
+            <p>
+              <em>
+                
+                  <a href="https://www.unibo.it/en" target="_blank">Alma Mater Studiorum - University of Bologna</a>
+                
+              </em>
+            </p>
+          
+          <p>Master&#39;s degree</p>
+          <p>Score: 28.3/30</p>
+        </div>
+        <p align="right">
+          <em>
+  September 2023 ⇾
+
+
+  March 2026
+
+</em>
+        </p>
+      </div>
+      <div>
+        
+          <h4>Courses</h4>
+          <ul>
+            
+              <li>Thesis: Enabling Multi-Species Bird Classification on Low-Power Bioacoustic Loggers</li>
+            
+          </ul>
+        
+      </div>
+    </article>
+  
+    <article>
+      <div class="grid">
+        <div>
+          
+            <h3>Computer and Automation Engineering</h3>
+          
+          
+            <p>
+              <em>
+                
+                  Polytechnic University of Marche
+                
+              </em>
+            </p>
+          
+          <p>Bachelor&#39;s degree</p>
+          <p>Score: 26/30 GPA</p>
+        </div>
+        <p align="right">
+          <em>
+  September 2018 ⇾
+
+
+  July 2023
+
+</em>
+        </p>
+      </div>
+      <div>
+        
+          <h4>Courses</h4>
+          <ul>
+            
+              <li>Thesis: Project of a virtual synthesizer in C&#43;&#43; on the JUCE platform</li>
+            
+              <li>Core focus on programming, electronics, automation, and control systems</li>
+            
+          </ul>
+        
+      </div>
+    </article>
+  
+    <article>
+      <div class="grid">
+        <div>
+          
+            <h3>Musical Instruments Engineering</h3>
+          
+          
+            <p>
+              <em>
+                
+                  Polytechnic University of Marche
+                
+              </em>
+            </p>
+          
+          <p>Professional development programme</p>
+          <p>Score: 30/30 cum laude</p>
+        </div>
+        <p align="right">
+          <em>
+  March 2022 ⇾
+
+
+  September 2022
+
+</em>
+        </p>
+      </div>
+      <div>
+        
+          <h4>Courses</h4>
+          <ul>
+            
+              <li>Focus on digital signal processing and audio applications</li>
+            
+              <li>Award for best project of the programme</li>
+            
+          </ul>
+        
+      </div>
+    </article>
+  
+    <article>
+      <div class="grid">
+        <div>
+          
+            <h3>Piano</h3>
+          
+          
+            <p>
+              <em>
+                
+                  Conservatory G. Rossini of Pesaro
+                
+              </em>
+            </p>
+          
+          <p>Conservatory diploma</p>
+          <p>Score: 10/10</p>
+        </div>
+        <p align="right">
+          <em>
+  January 2013 ⇾
+
+
+  December 2019
+
+</em>
+        </p>
+      </div>
+      <div>
+        
+      </div>
+    </article>
+  
+    <article>
+      <div class="grid">
+        <div>
+          
+            <h3>Teaching qualification pathway</h3>
+          
+          
+            <p>
+              <em>
+                
+                  Universita degli Studi eCampus
+                
+              </em>
+            </p>
+          
+          <p>24 CFU</p>
+          
+        </div>
+        <p align="right">
+          <em>
+  January 2020 ⇾
+
+
+  December 2020
+
+</em>
+        </p>
+      </div>
+      <div>
+        
+          <h4>Courses</h4>
+          <ul>
+            
+              <li>Anthropological, psycho-pedagogical, and teaching-methodology training</li>
+            
+          </ul>
+        
+      </div>
+    </article>
+  
+ 
+
+      </section>
+
+      <section id="awards" class="resume-section">
+        
+  <h2>Awards</h2>
+  <hr />
+  
+    <div class="grid">
+      <div>
+        
+          <h3>Award for best project of the programme</h3>
+        
+        
+          <p><em>Polytechnic University of Marche, Musical Instruments Engineering</em></p>
+        
+      </div>
+      <p align="right">
+        <em>
+  September 2022
+
+
+</em>
+      </p>
     </div>
-
-    
+  
+    <div class="grid">
       <div>
-        <h3>Profiles</h3>
-        <ul>
-            <li>
-              <a href="https://github.com/leonardoman9" rel="me" title="GitHub">
-                <svg class="feather">
-  <use href="https://leonardoman9.github.io/feather-icons/feather-sprite.svg#github"></use>
-</svg>
-
-                leonardoman9
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/leonardomannini/" rel="me" title="LinkedIn">
-                <svg class="feather">
-  <use href="https://leonardoman9.github.io/feather-icons/feather-sprite.svg#linkedin"></use>
-</svg>
-
-                leonardomannini
-              </a>
-            </li>
-        </ul>
+        
+          <h3>Winner of the Italian Rapid U16 Chess Championships</h3>
+        
+        
       </div>
-    
+      <p align="right">
+        <em>
+  June 2015
 
-    
+
+</em>
+      </p>
+    </div>
+  
+
+
+      </section>
+
+      <section id="certificates" class="resume-section">
+        
+  <h2>Certificates</h2>
+  <hr />
+  
+    <div class="grid">
       <div>
-        <h3>Projects</h3>
-        <ul>
-          
-            <li>
-              <a href="">
-                Virtual Synthesizer (Bachelor&#39;s Thesis)
-              </a>
-            </li>
-          
-            <li>
-              <a href="">
-                Sound Classifier (Personal Project)
-              </a>
-            </li>
-          
-            <li>
-              <a href="">
-                Hiring Assistant (Web Application)
-              </a>
-            </li>
-          
-            <li>
-              <a href="">
-                Food Product Recognition (University Project)
-              </a>
-            </li>
-          
-            <li>
-              <a href="">
-                Sexism Detection in Social Media (University Assignment)
-              </a>
-            </li>
-          
-            <li>
-              <a href="">
-                LeoLM (Personal Project)
-              </a>
-            </li>
-          
-        </ul>
+        
+          <h3>
+            
+              Technical Support Fundamentals
+            
+          </h3>
+        
+        
       </div>
-    
+      <p align="right">
+        <em>
 
-  </section>
+</em>
+      </p>
+    </div>
+  
 
-  <section class="grid basics-links">
-    
-      <div>
-        <h3>Certificates</h3>
-        <ul>
-          
-            <li>
-              <a href="" title="ETS">
-                TOEFL iBT
-              </a>
-            </li>
-          
-            <li>
-              <a href="" title="">
-                Teaching Qualification (24 CFU)
-              </a>
-            </li>
-          
-        </ul>
-      </div>
-    
 
-    
+      </section>
 
+      <section id="skills" class="resume-section">
+        
+  <h2>Skills</h2>
+  <hr />
+  
+    <p><strong>Programming</strong>: Python, C&#43;&#43;, Java &amp; Bash</p>
+  
+    <p><strong>LLM &amp; Agentic Systems</strong>: LangChain, LangGraph, Retrieval-Augmented Generation (RAG), OpenAI API, Local LLMs, Prompt engineering, Tool-based reasoning &amp; Structured outputs</p>
+  
+    <p><strong>Backend &amp; APIs</strong>: FastAPI, REST APIs, WebSockets, PostgreSQL, SQLAlchemy &amp; Redis</p>
+  
+    <p><strong>Machine Learning &amp; Edge AI</strong>: PyTorch, TensorFlow, PyTorch Lightning, NumPy, Scikit-learn, TensorFlow Lite Micro, CMSIS-NN &amp; TinyML</p>
+  
+    <p><strong>Vector Search</strong>: FAISS &amp; Chroma</p>
+  
+    <p><strong>Knowledge Engineering</strong>: Ontology generation, Knowledge extraction, Knowledge representation, Semantic Web fundamentals &amp; Structured output evaluation</p>
+  
+    <p><strong>MLOps &amp; Infrastructure</strong>: Docker, Terraform, Hydra, TensorBoard &amp; Linux</p>
+  
+    <p><strong>Audio &amp; Music Technology</strong>: JUCE, DSP, Real-time audio processing, MIDI programming &amp; Music production</p>
+  
+
+
+      </section>
+
+      <section id="languages" class="resume-section">
+        
+  <h2>Languages</h2>
+  <hr />
+  
+    <p><strong>Italian</strong>: Native</p>
+  
+    <p><strong>English</strong>: C1 / Full professional proficiency (TOEFL iBT 105/120)</p>
+  
+
+
+      </section>
+
+      <section id="projects" class="resume-section">
+        
+  <h2>Projects</h2>
+  <hr />
+  <div class="project-list">
     
-      <div>
-        <h3>Awards</h3>
-        <ul>
+      
+      <article class="project-row">
+        
+          <a class="project-thumb" href="/projects/camadon-ai/">
+            <img src="/images/projects/camadon.svg" alt="" loading="lazy" />
+          </a>
+        
+        <div>
+          <div class="grid">
+            <div>
+              <h3>
+                <a href="/projects/camadon-ai/">Camadon.ai - Mobile-Native AI Coding Environment</a>
+              </h3>
+              <p>Mobile-native AI coding environment for iOS with terminal execution and AI-assisted workflows.</p>
+              
+                <p><a href="https://camadon.ai">External link</a></p>
+              
+            </div>
+            
+          </div>
           
-            <li>
-              <p>Award for best project of the Programme - <em>Polytechnic University of Marche (Musical Instruments Engineering PDP)</em></p>
-            </li>
+            <h4>Highlights</h4>
+            <ul>
+              
+                <li>Developed a mobile-native AI coding environment for iOS with terminal execution and AI-assisted workflows.</li>
+              
+                <li>Built secure backend infrastructure with FastAPI, encrypted WebSocket relay, Redis, JWT authentication, Docker, and Terraform.</li>
+              
+                <li>Grew the product to 150&#43; beta users in 3 months, achieving 32% weekly retention and a 4.7/5 rating.</li>
+              
+            </ul>
           
-            <li>
-              <p>Winner of the Italian Rapid U16 Chess Championships - <em></em></p>
-            </li>
-          
-        </ul>
-      </div>
+        </div>
+      </article>
     
-  </section></article>
+      
+      <article class="project-row">
+        
+          <a class="project-thumb" href="/projects/bird-audio-classification-edge-devices/">
+            <img src="/images/projects/bird-audio.svg" alt="" loading="lazy" />
+          </a>
+        
+        <div>
+          <div class="grid">
+            <div>
+              <h3>
+                <a href="/projects/bird-audio-classification-edge-devices/">Bird Audio Classification on Edge Devices - TinyML Pipeline</a>
+              </h3>
+              <p>TinyML pipeline for low-power bioacoustic classification, connected to research accepted at IEEE ICASSP 2026.</p>
+              
+            </div>
+            
+          </div>
+          
+            <h4>Highlights</h4>
+            <ul>
+              
+                <li>Developed an end-to-end TinyML pipeline trained on 150k&#43; audio samples across 70 species.</li>
+              
+                <li>Designed lightweight CNN-GRU architectures optimized for microcontroller deployment, reaching up to 90.8% accuracy on distinctive species.</li>
+              
+                <li>Deployed real-time inference on AudioMoth firmware using TensorFlow Lite Micro and CMSIS-NN, achieving about 16x lower energy consumption than baseline systems.</li>
+              
+            </ul>
+          
+        </div>
+      </article>
+    
+      
+      <article class="project-row">
+        
+          <a class="project-thumb" href="/projects/grounded-research-assistant/">
+            <img src="/images/projects/grounded.svg" alt="" loading="lazy" />
+          </a>
+        
+        <div>
+          <div class="grid">
+            <div>
+              <h3>
+                <a href="/projects/grounded-research-assistant/">Grounded - Full-Stack LLM Research Assistant</a>
+              </h3>
+              <p>Research assistant using LangGraph agents for grounded question answering across large academic corpora.</p>
+              
+            </div>
+            
+          </div>
+          
+            <h4>Highlights</h4>
+            <ul>
+              
+                <li>Built a full-stack research assistant using LangGraph agents for grounded QA across large academic corpora.</li>
+              
+                <li>Designed FastAPI retrieval pipelines integrating OCR ingestion, vector search, and persistent PostgreSQL storage.</li>
+              
+                <li>Improved citation accuracy to 87% and reduced latency from 9.4s to 4.1s through retrieval and caching optimizations.</li>
+              
+            </ul>
+          
+        </div>
+      </article>
+    
+      
+      <article class="project-row">
+        
+          <a class="project-thumb" href="/projects/goldenradio/">
+            <img src="/images/projects/goldenradio.svg" alt="" loading="lazy" />
+          </a>
+        
+        <div>
+          <div class="grid">
+            <div>
+              <h3>
+                <a href="/projects/goldenradio/">GoldenRadio - ATS25 Firmware Enhancement and Licensing System</a>
+              </h3>
+              <p>Enhanced firmware and production licensing system for ATS25 radio devices.</p>
+              
+            </div>
+            
+          </div>
+          
+            <h4>Highlights</h4>
+            <ul>
+              
+                <li>Developed enhanced firmware for ATS25 radio devices, adding new features that gained widespread community adoption.</li>
+              
+                <li>Designed a production-grade licensing system for secure firmware activation and controlled distribution.</li>
+              
+                <li>Built backend workflows for license validation and device authorization, supporting viral adoption and 100&#43; device sales in the first month.</li>
+              
+            </ul>
+          
+        </div>
+      </article>
+    
+      
+      <article class="project-row">
+        
+          <a class="project-thumb" href="/projects/bench4ke-extension/">
+            <img src="/images/projects/bench4ke.svg" alt="" loading="lazy" />
+          </a>
+        
+        <div>
+          <div class="grid">
+            <div>
+              <h3>
+                <a href="/projects/bench4ke-extension/">Bench4KE Extension - Ontology Generation Benchmark Framework</a>
+              </h3>
+              <p>API-driven benchmark framework for ontology generation and knowledge-engineering systems.</p>
+              
+            </div>
+            
+          </div>
+          
+            <h4>Highlights</h4>
+            <ul>
+              
+                <li>Extended an API-driven benchmark for LLM-based ontology generation and knowledge-engineering systems.</li>
+              
+                <li>Designed FastAPI pipelines executing external generators through standardized REST interfaces.</li>
+              
+                <li>Built reproducible evaluation workflows combining structural metrics, automated validation, and controlled generation assessment.</li>
+              
+            </ul>
+          
+        </div>
+      </article>
+    
+      
+      <article class="project-row">
+        
+          <a class="project-thumb" href="/projects/virtual-synthesizer/">
+            <img src="/images/projects/virtual-synthesizer.svg" alt="" loading="lazy" />
+          </a>
+        
+        <div>
+          <div class="grid">
+            <div>
+              <h3>
+                <a href="/projects/virtual-synthesizer/">Virtual Synthesizer</a>
+              </h3>
+              <p>Bachelor&#39;s thesis project: virtual synthesizer in C&#43;&#43; using the JUCE framework.</p>
+              
+            </div>
+            
+              <p align="right">
+                <em>
+  September 2022 ⇾
+
+
+  July 2023
+
+</em>
+              </p>
+            
+          </div>
+          
+            <h4>Highlights</h4>
+            <ul>
+              
+                <li>Implemented real-time audio DSP algorithms, modular synthesis components, and MIDI control.</li>
+              
+            </ul>
+          
+        </div>
+      </article>
+    
+  </div>
+
+
+      </section>
+    </article>
+  </div>
+
+  <script>
+    (() => {
+      const tocLinks = Array.from(document.querySelectorAll(".resume-toc a[href^='#']"));
+      const toc = document.querySelector(".resume-toc");
+      const tocToggle = document.querySelector(".resume-toc-toggle");
+      const sections = tocLinks
+        .map((link) => document.querySelector(link.getAttribute("href")))
+        .filter(Boolean);
+
+      if (!tocLinks.length || !sections.length) return;
+
+      const setActive = (id) => {
+        tocLinks.forEach((link) => {
+          link.classList.toggle("is-active", link.getAttribute("href") === `#${id}`);
+        });
+      };
+
+      const updateActive = () => {
+        const marker = window.scrollY + Math.min(window.innerHeight * 0.35, 320);
+        let current = sections[0];
+
+        sections.forEach((section) => {
+          if (section.offsetTop <= marker) current = section;
+        });
+
+        setActive(current.id);
+      };
+
+      let ticking = false;
+      const requestUpdate = () => {
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(() => {
+          updateActive();
+          ticking = false;
+        });
+      };
+
+      window.addEventListener("scroll", requestUpdate, { passive: true });
+      window.addEventListener("resize", requestUpdate);
+
+      if (toc && tocToggle) {
+        tocToggle.addEventListener("click", () => {
+          const isOpen = toc.classList.toggle("is-open");
+          tocToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        tocLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            toc.classList.remove("is-open");
+            tocToggle.setAttribute("aria-expanded", "false");
+          });
+        });
+      }
+
+      updateActive();
+    })();
+  </script>
+
 
     </main>
 
@@ -393,10 +989,10 @@ I also have experience in designing AI services for NLP and computer vision appl
   <section>
     <p>
       <small>
-        © 2025 
+        © 2026 
       </small>
     </p>
   </section>
 </footer> 
   </body>
-</html> 
+</html>

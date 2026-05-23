@@ -1,0 +1,42 @@
+{{ with .projects }}
+  <h2>{{ T "project" | title }}</h2>
+  <hr />
+  <div class="project-list">
+    {{ range . }}
+      {{ $slug := .slug | default (urlize .name) }}
+      <article class="project-row">
+        {{ with .image }}
+          <a class="project-thumb" href="{{ printf "/projects/%s/" $slug | relURL }}">
+            <img src="{{ . | relURL }}" alt="" loading="lazy" />
+          </a>
+        {{ end }}
+        <div>
+          <div class="grid">
+            <div>
+              <h3>
+                <a href="{{ printf "/projects/%s/" $slug | relURL }}">{{ .name }}</a>
+              </h3>
+              {{ with .summary }}<p>{{ . }}</p>{{ end }}
+              {{ with .url }}
+                <p><a href="{{ . }}">External link</a></p>
+              {{ end }}
+            </div>
+            {{ if or .startDate .endDate }}
+              <p align="right">
+                <em>{{ partial "resume/start-end-times.html" . }}</em>
+              </p>
+            {{ end }}
+          </div>
+          {{ with .highlights }}
+            <h4>Highlights</h4>
+            <ul>
+              {{ range . }}
+                <li>{{ . }}</li>
+              {{ end }}
+            </ul>
+          {{ end }}
+        </div>
+      </article>
+    {{ end }}
+  </div>
+{{ end }}

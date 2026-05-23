@@ -1,0 +1,31 @@
+{{ define "main" }}
+  {{ $slug := .File.BaseFileName }}
+  {{ $matches := where site.Data.resume.projects "slug" $slug }}
+  {{ $project := index $matches 0 }}
+  <main class="container">
+    {{ with $project }}
+      <article class="project-detail">
+        <p><a href="{{ "/projects/" | relURL }}">Projects</a></p>
+        <h1>{{ .name }}</h1>
+        {{ with .image }}
+          <img class="project-hero" src="{{ . | relURL }}" alt="" />
+        {{ end }}
+        {{ with .summary }}<p>{{ . }}</p>{{ end }}
+        {{ with .url }}
+          <p><a href="{{ . }}">External link</a></p>
+        {{ end }}
+        {{ with .highlights }}
+          <h2>Highlights</h2>
+          <ul>
+            {{ range . }}
+              <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        {{ end }}
+      </article>
+    {{ else }}
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
+    {{ end }}
+  </main>
+{{ end }}

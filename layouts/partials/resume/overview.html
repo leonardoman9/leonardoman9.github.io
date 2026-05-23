@@ -1,0 +1,30 @@
+<section id="about" class="grid resume-section">
+  <div>
+    {{ with .basics.name }}
+      <h2>{{ . }}</h2>
+    {{ end }}
+    {{ with .basics.label }}
+      <p><em>{{ . }}</em></p>
+    {{ end }}
+    {{ with .basics.summary }}
+      <p>{{ . }}</p>
+    {{ end }}
+  </div>
+</section>
+
+{{ with .publications }}
+  <section id="publications" class="resume-section">
+    <h3>Publications</h3>
+    <ul>
+      {{ range . }}
+        <li>
+          {{ if .url }}
+            <a href="{{ .url }}">{{ .name }}</a>
+          {{ else }}
+            {{ .name }}
+          {{ end }}
+        </li>
+      {{ end }}
+    </ul>
+  </section>
+{{ end }}

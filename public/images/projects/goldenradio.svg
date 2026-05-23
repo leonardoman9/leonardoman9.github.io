@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Abstract radio firmware placeholder">
+  <rect width="640" height="360" fill="#211805"/>
+  <rect x="96" y="118" width="448" height="174" rx="20" fill="#3f2f13" stroke="#fbbf24" stroke-width="5"/>
+  <circle cx="190" cy="206" r="52" fill="#111827" stroke="#f59e0b" stroke-width="8"/>
+  <circle cx="430" cy="204" r="26" fill="#fbbf24"/>
+  <circle cx="498" cy="204" r="26" fill="#fbbf24"/>
+  <path d="M296 166h178M296 210h92M296 248h138" stroke="#fde68a" stroke-width="10" stroke-linecap="round"/>
+  <path d="M160 118 258 48" stroke="#fbbf24" stroke-width="8" stroke-linecap="round"/>
+</svg>
