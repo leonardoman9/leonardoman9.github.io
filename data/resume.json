@@ -5,13 +5,13 @@
     "image": "",
     "email": "mannini.leonardo@protonmail.com",
     "url": "https://www.leonardomannini.com/",
-    "summary": "AI Engineer specializing in production LLM pipelines, RAG systems, agent-based workflows, backend development, and Edge AI for resource-constrained environments. I build end-to-end AI systems with LangChain, LangGraph, FastAPI, vector search, Docker-based services, and local or hosted LLMs. My research work includes TinyML models for real-time bioacoustic classification on microcontrollers, contributing to a paper accepted at IEEE ICASSP 2026.",
+    "summary": "AI Engineer specializing in production LLM pipelines, RAG systems, agent-based workflows, backend development, and Edge AI for resource-constrained environments. I build end-to-end AI systems with LangChain, LangGraph, FastAPI, vector search, Docker-based services, and local or hosted LLMs. My research work includes TinyML models for real-time bioacoustic classification on microcontrollers, published at IEEE ICASSP 2026.",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "Ancona",
+      "city": "Bologna",
       "countryCode": "IT",
-      "region": "Italy / London, UK"
+      "region": "Italy"
     },
     "profiles": [
       {
@@ -63,14 +63,14 @@
       "url": "https://www.fbk.eu/en/",
       "location": "Trento, Italy",
       "startDate": "2025-03-01",
-      "endDate": "2026-02-01",
+      "endDate": "2026-01-01",
       "summary": "Developed TinyML models for real-time audio classification on resource-constrained embedded devices.",
       "highlights": [
         "Designed lightweight CNN-GRU-Attention architectures for 70-species classification on microcontrollers.",
         "Processed 150k+ audio files for model training and benchmarking.",
         "Optimized inference pipelines using TensorFlow Lite Micro and CMSIS-NN.",
         "Achieved about 16x lower energy consumption compared to standard baseline systems.",
-        "Contributed to research accepted at IEEE ICASSP 2026."
+        "Contributed to research published at IEEE ICASSP 2026."
       ]
     },
     {
@@ -178,7 +178,7 @@
   "publications": [
     {
       "name": "Enabling Multi-Species Bird Classification on Low-Power Bioacoustic Loggers",
-      "publisher": "Proceedings of IEEE ICASSP 2026 (accepted)",
+      "publisher": "Proceedings of IEEE ICASSP 2026",
       "releaseDate": "2026-01-01",
       "url": "https://ieeexplore.ieee.org/document/11463679",
       "summary": "Stefano Sciapponi, Leonardo Mannini, Jarek Scanferla, Matteo Anderle, Elisabetta Farella."
@@ -306,13 +306,28 @@
       "url": "https://camadon.ai"
     },
     {
-      "name": "Bird Audio Classification on Edge Devices - TinyML Pipeline",
+      "name": "BioDCASE-Tiny 2026 Task 3 - WrenNet Embedded Bird Sound Classification",
+      "slug": "biodcase-tiny-2026-wrennet",
+      "image": "/images/projects/biodcase.svg",
+      "featured": true,
+      "startDate": "",
+      "endDate": "",
+      "summary": "WrenNet-based solution for low-power bird sound classification on resource-constrained ESP32-S3 hardware.",
+      "highlights": [
+        "Submitted a WrenNet-based solution for low-power bird sound classification on resource-constrained ESP32-S3 hardware.",
+        "Built a PyTorch-to-TensorFlow Lite Micro deployment pipeline with a custom waveform frontend, ONNX/TFLite export, and ESP-IDF firmware integration.",
+        "Achieved 65.21% validation accuracy and 0.933 ROC-AUC, with embedded inference fitting within a 263.5 kB TensorFlow Lite Micro arena budget."
+      ],
+      "url": ""
+    },
+    {
+      "name": "Bird Audio Classification on Edge Devices - TinyML Pipeline (IEEE ICASSP 2026)",
       "slug": "bird-audio-classification-edge-devices",
       "image": "/images/projects/bird-audio.svg",
       "featured": true,
       "startDate": "",
       "endDate": "",
-      "summary": "TinyML pipeline for low-power bioacoustic classification, connected to research accepted at IEEE ICASSP 2026.",
+      "summary": "TinyML pipeline for low-power bioacoustic classification, published at IEEE ICASSP 2026.",
       "highlights": [
         "Developed an end-to-end TinyML pipeline trained on 150k+ audio samples across 70 species.",
         "Designed lightweight CNN-GRU architectures optimized for microcontroller deployment, reaching up to 90.8% accuracy on distinctive species.",

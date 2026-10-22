@@ -10,7 +10,8 @@
       <p class="resume-label">{{ . }}</p>
     {{ end }}
     {{ with .basics.location }}
-      {{ with .region }}<p class="resume-location">{{ partial "feather.html" "map-pin" }} {{ . }}</p>{{ end }}
+      {{ $place := delimit (slice .city .region | complement (slice "")) ", " }}
+      {{ with $place }}<p class="resume-location">{{ partial "feather.html" "map-pin" }} {{ . }}</p>{{ end }}
     {{ end }}
     {{ with .basics.summary }}
       <p>{{ . }}</p>
