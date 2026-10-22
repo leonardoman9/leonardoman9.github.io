@@ -28,12 +28,26 @@
   },
   "work": [
     {
+      "name": "Inventi (PwC project)",
+      "position": "Senior AI Engineer / Contractor",
+      "url": "",
+      "location": "Prague / Remote",
+      "startDate": "2026-06-01",
+      "endDate": "",
+      "summary": "Contributing to enterprise AI systems for a PwC-led project, focusing on production-grade LLM applications, backend services, and workflow automation.",
+      "highlights": [
+        "Working on AI/backend implementation for a tax reconciliation project, including project study, technical analysis, and integration planning.",
+        "Collaborating with cross-functional stakeholders on requirements, onboarding, and delivery workflows in an enterprise consulting environment.",
+        "Supporting development workflows involving Python, FastAPI, LLM tooling, retrieval systems, and production-oriented backend infrastructure."
+      ]
+    },
+    {
       "name": "GradientLabs",
       "position": "AI Engineer",
       "url": "https://www.gradientlabs.it/",
       "location": "Remote",
       "startDate": "2023-08-01",
-      "endDate": "",
+      "endDate": "2026-06-01",
       "summary": "Designing and deploying LangChain, RAG, LLM, FastAPI, and vector-search systems for business automation and intelligent workflows.",
       "highlights": [
         "Built agent-based RAG pipelines using LangChain, FastAPI, and FAISS, indexing 1,200+ documents with 87% citation accuracy.",
