@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Abstract embedded bird sound classification placeholder">
+  <rect width="640" height="360" fill="#141026"/>
+  <rect x="70" y="92" width="200" height="176" rx="14" fill="#221b3d" stroke="#c4b5fd" stroke-width="4"/>
+  <rect x="116" y="138" width="108" height="84" rx="6" fill="#0f0b1f" stroke="#a78bfa" stroke-width="3"/>
+  <path d="M100 92v-22M140 92v-22M180 92v-22M220 92v-22M100 268v22M140 268v22M180 268v22M220 268v22" stroke="#c4b5fd" stroke-width="6" stroke-linecap="round"/>
+  <path d="M320 180h24l14-44 20 92 20-120 20 136 20-90 16 40h24" fill="none" stroke="#f0abfc" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M500 130c30-24 72-20 98 6-34 6-54 22-66 50-10-22-22-40-32-56z" fill="#f8fafc"/>
+  <circle cx="566" cy="140" r="6" fill="#141026"/>
+</svg>
