@@ -1,29 +1,18 @@
 <footer class="container">
-  <section class="footer-explore">
-    <h4>{{ T "explore" | title }}</h4>
-    {{ with .Site.Taxonomies.tags }}
-      <h5>
-        <a href="/tags/">Tags</a>
-      </h5>
-      <nav>
-        <ul>
-          {{ range first 5 .ByCount }}
-            <li>
-              <small>
-                <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
-              </small>
-            </li>
-          {{ end }}
-        </ul>
-      </nav>
-    {{ end }}
-  </section>
-
-  <section>
-    <p>
-      <small>
-        © {{ now.Format "2006" }} {{ site.Copyright }}
-      </small>
-    </p>
-  </section>
-</footer> 
+  {{ with .Site.Params.social }}
+    <div class="footer-social">
+      {{ range . }}
+        <a class="social-link" href="{{ .url }}" rel="me" title="{{ .name }}">
+          {{ partial "feather.html" .icon }}
+          <span class="sr-only">{{ .name }}</span>
+        </a>
+      {{ end }}
+    </div>
+  {{ end }}
+  <p>
+    <small>
+      © {{ now.Format "2006" }} {{ site.Copyright }}
+      {{ with site.Params.footer.text }}· {{ . }}{{ end }}
+    </small>
+  </p>
+</footer>

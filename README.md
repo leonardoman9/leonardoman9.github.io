@@ -6,20 +6,18 @@ Questo repository contiene il codice sorgente del mio sito personale, costruito 
 
 ```
 leonardoman9.github.io/
-├── content/             # Contenuti del sito
-│   ├── _index.md        # Contenuto homepage
-│   ├── posts/           # Articoli del blog
-│   └── resume.md        # Pagina del CV
-├── data/                
+├── content/
+│   ├── _index.md        # Homepage (il contenuto arriva da data/resume.json)
+│   └── projects/        # Una pagina per progetto (slug = nome file)
+├── data/
 │   └── resume.json      # Dati CV in formato JSON Resume
-├── layouts/             # Layout personalizzati
-│   ├── index.html       # Homepage personalizzata
-│   ├── _default/        # Layout default
-│   └── partials/        # Componenti riutilizzabili
-├── static/              # Asset statici (CSS, immagini, ecc.)
+├── layouts/             # Override del tema (homepage, header, footer, CV, progetti)
+├── static/              # CSS custom, immagini dei progetti, CNAME
 ├── hugo.toml            # Configurazione principale
-└── .github/workflows/   # Configurazione CI/CD
+└── .github/workflows/   # Build e deploy su GitHub Pages
 ```
+
+`public/` e `resources/` sono generati dalla build e non vanno committati.
 
 ## Guida alla Personalizzazione
 
@@ -28,10 +26,12 @@ leonardoman9.github.io/
 **File**: `hugo.toml`
 
 ```toml
-title = "Leonardo Mannini"              # Titolo del sito
-copyright = "Leonardo Mannini"          # Copyright (no simbolo © o anno)
-baseURL = 'https://leonardoman9.github.io/' # URL base
+baseURL = 'https://www.leonardomannini.com/' # Deve coincidere con static/CNAME
+title = 'Leonardo Mannini'
+copyright = 'Leonardo Mannini'
 ```
+
+Le chiavi top-level vanno messe **prima** di qualsiasi sezione `[...]`, altrimenti TOML le assegna a quella sezione.
 
 ### 2. Profilo e Curriculum
 
@@ -47,56 +47,23 @@ Questo file JSON contiene tutti i dati personali visualizzati nel sito:
 
 **IMPORTANTE**: Le date devono essere nel formato `YYYY-MM-DD` (es. `2025-01-01`).
 
-### 3. Gestione degli Articoli Blog
+- **Foto profilo**: metti l'immagine in `static/images/` e imposta `basics.image` (es. `"/images/profile.jpg"`).
+- **Nuovo progetto**: aggiungilo all'array `projects` con uno `slug` e crea `content/projects/<slug>.md` con solo il `title`.
 
-**Directory**: `content/posts/`
-
-Per creare un nuovo post:
-
-1. Crea un nuovo file Markdown in `content/posts/` (es. `nuovo-post.md`)
-2. Aggiungi il frontmatter all'inizio:
-
-```
-+++
-title = "Titolo del Post"
-date = 2025-04-14T12:00:00+01:00
-draft = false
-tags = ["tag1", "tag2"]
-categories = ["categoria"]
-# Opzionale:
-mermaid = true  # Per includere diagrammi
-katex = true    # Per formule matematiche
-+++
-
-Contenuto dell'articolo...
-```
-
-Per evidenziare un post nella homepage, aggiungi `categories = ["featured"]`.
-
-### 4. Personalizzazione del Layout
+### 3. Personalizzazione del Layout
 
 #### Menu di Navigazione
 
 **File**: `hugo.toml`
 
 ```toml
-# Menu principale
 [[menu.main]]
-name = "Blog"
-url = "/posts/"
+name = 'Projects'
+url = '/projects/'
 weight = 1
-
-[[menu.main]]
-name = "Resume"
-url = "/resume/"
-weight = 2
-
-# Aggiungi nuove voci così:
-[[menu.main]]
-name = "Progetti"
-url = "/projects/"
-weight = 3
 ```
+
+Per riattivare un blog: crea i post in `content/posts/`, aggiungi una voce `Blog` al menu e togli `disableKinds` se vuoi le pagine dei tag.
 
 #### Stile e CSS
 
@@ -120,7 +87,7 @@ Modifica questo file per personalizzare completamente il footer.
 
 Modifica questo file per cambiare struttura e stile della homepage.
 
-### 5. Immagini e Asset Statici
+### 4. Immagini e Asset Statici
 
 **Directory**: `static/`
 
@@ -143,9 +110,9 @@ Per aggiungere un'immagine e usarla nel contenuto:
    cd leonardoman9.github.io
    ```
 
-2. Installa Hugo (se non già installato):
+2. Installa Hugo **extended** (stessa versione della CI, vedi `.github/workflows/gh-pages.yml`) e Go, necessario per scaricare il tema come Hugo module:
    ```
-   brew install hugo
+   brew install hugo go
    ```
 
 3. Avvia il server di sviluppo:

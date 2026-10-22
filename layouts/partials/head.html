@@ -1,18 +1,24 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>{{ .Site.Title }}</title>
+{{ $title := site.Title }}
+{{ if not .IsHome }}{{ $title = printf "%s | %s" .Title site.Title }}{{ end }}
+{{ $description := .Description | default site.Params.description }}
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $description }}" />
+<link rel="canonical" href="{{ .Permalink }}" />
 
-<!-- Google Analytics -->
+{{ with site.Config.Services.GoogleAnalytics.ID }}
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PW6SB9H75R"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-PW6SB9H75R');
+  gtag('config', '{{ . }}');
 </script>
+{{ end }}
 
 {{ if .Site.Params.serviceWorker }}
 <script>
@@ -26,12 +32,14 @@ if (navigator.serviceWorker) {
   {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
 
-<meta property="og:title" content="{{ .Site.Title }}" />
+<meta property="og:title" content="{{ $title }}" />
+<meta property="og:description" content="{{ $description }}" />
 <meta property="og:site_name" content="{{ .Site.Title }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="{{ .Site.Title }}" />
+<meta name="twitter:title" content="{{ $title }}" />
+<meta name="twitter:description" content="{{ $description }}" />
 
 <link
   rel="preload"
@@ -39,49 +47,17 @@ if (navigator.serviceWorker) {
   as="image"
 />
 
-<!-- Theme CSS files -->
-<link
-  rel="stylesheet"
-  type="text/css"
-  media="screen"
-  href="{{ "css/feather-icon.css" | relURL }}"
-/>
-<link
-  rel="stylesheet"
-  type="text/css"
-  media="screen"
-  href="{{ "css/footer.css" | relURL }}"
-/>
-<link
-  rel="stylesheet"
-  type="text/css"
-  media="screen"
-  href="{{ "css/resume.css" | relURL }}"
-/>
-<link
-  rel="stylesheet"
-  type="text/css"
-  media="screen"
-  href="{{ "css/site-header.css" | relURL }}"
-/>
-<link
-  rel="stylesheet"
-  type="text/css"
-  media="screen"
-  href="{{ "css/site.css" | relURL }}"
-/>
-<link
-  rel="stylesheet"
-  type="text/css"
-  media="screen"
-  href="{{ "picocss/pico.blue.css" | relURL }}"
-/>
+<!-- Theme CSS files (from the theme's assets/, so they are built every time) -->
+{{ $pico := resources.Get (printf "picocss/pico.%s.css" (site.Params.colourScheme | default "blue")) }}
+{{ $styles := (resources.Match "css/**.css") | append $pico }}
+{{ $css := $styles | resources.Concat "main.css" }}
+{{ if hugo.IsProduction }}{{ $css = $css | minify | fingerprint }}{{ end }}
+<link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}" />
 
 {{ range .Site.Params.customCSS }}
 <link
   rel="stylesheet"
   type="text/css"
-  media="screen"
   href="{{ . | relURL }}"
 />
 {{ end }}

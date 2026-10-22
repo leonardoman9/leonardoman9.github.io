@@ -1,14 +1,33 @@
-<section id="about" class="grid resume-section">
+<section id="about" class="resume-section resume-hero">
+  {{ with .basics.image }}
+    <img class="resume-photo" src="{{ . | relURL }}" alt="{{ $.basics.name }}" />
+  {{ end }}
   <div>
     {{ with .basics.name }}
-      <h2>{{ . }}</h2>
+      <h1>{{ . }}</h1>
     {{ end }}
     {{ with .basics.label }}
-      <p><em>{{ . }}</em></p>
+      <p class="resume-label">{{ . }}</p>
+    {{ end }}
+    {{ with .basics.location }}
+      {{ with .region }}<p class="resume-location">{{ partial "feather.html" "map-pin" }} {{ . }}</p>{{ end }}
     {{ end }}
     {{ with .basics.summary }}
       <p>{{ . }}</p>
     {{ end }}
+    <div class="resume-actions">
+      {{ with .basics.email }}
+        <a role="button" href="mailto:{{ . }}">{{ partial "feather.html" "mail" }} Contact me</a>
+      {{ end }}
+      {{ range .basics.profiles }}
+        <a role="button" class="outline" href="{{ .url }}" rel="me">
+          {{ partial "feather.html" (lower .network) }} {{ .network }}
+        </a>
+      {{ end }}
+      <button type="button" class="outline secondary" onclick="window.print()">
+        {{ partial "feather.html" "download" }} Save CV as PDF
+      </button>
+    </div>
   </div>
 </section>
 
@@ -23,6 +42,8 @@
           {{ else }}
             {{ .name }}
           {{ end }}
+          {{ with .publisher }}<br /><small><em>{{ . }}</em></small>{{ end }}
+          {{ with .summary }}<br /><small>{{ . }}</small>{{ end }}
         </li>
       {{ end }}
     </ul>
