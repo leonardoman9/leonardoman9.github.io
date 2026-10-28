@@ -20,6 +20,9 @@
               {{ with .url }}
                 <p><a href="{{ . }}">Visit website →</a></p>
               {{ end }}
+              {{ with .video }}
+                <p><a href="{{ . }}" target="_blank" rel="noopener">▶ Watch the presentation</a></p>
+              {{ end }}
             </div>
             {{ if or .startDate .endDate }}
               <p align="right">

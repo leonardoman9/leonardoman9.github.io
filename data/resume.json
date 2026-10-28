@@ -318,7 +318,8 @@
         "Built a PyTorch-to-TensorFlow Lite Micro deployment pipeline with a custom waveform frontend, ONNX/TFLite export, and ESP-IDF firmware integration.",
         "Achieved 65.21% validation accuracy and 0.933 ROC-AUC, with embedded inference fitting within a 263.5 kB TensorFlow Lite Micro arena budget."
       ],
-      "url": ""
+      "url": "",
+      "video": "https://youtu.be/xTMfmAVm3F8"
     },
     {
       "name": "Bird Audio Classification on Edge Devices - TinyML Pipeline (IEEE ICASSP 2026)",
